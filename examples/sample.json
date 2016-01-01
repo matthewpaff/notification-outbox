@@ -1,0 +1,13 @@
+{
+  "events": [
+    {
+      "action": "commit",
+      "id": "notice-5",
+      "value": {
+        "sample": 5,
+        "topic": "notification"
+      },
+      "fail": true
+    }
+  ]
+}
