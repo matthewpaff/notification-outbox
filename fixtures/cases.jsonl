@@ -1,1 +1,2 @@
 {"description": "reject unsupported outbox actions", "expected_error": true, "id": "outbox-0000", "input": {"events": [{"action": "unknown", "id": "notice-0"}]}}
+{"description": "reject commits without a record value", "expected_error": true, "id": "outbox-0001", "input": {"events": [{"action": "commit", "id": "notice-1"}]}}
