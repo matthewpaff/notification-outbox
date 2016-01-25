@@ -13,3 +13,4 @@
 {"description": "reject unsupported outbox actions", "expected_error": true, "id": "outbox-0012", "input": {"events": [{"action": "unknown", "id": "notice-12"}]}}
 {"description": "reject commits without a record value", "expected_error": true, "id": "outbox-0013", "input": {"events": [{"action": "commit", "id": "notice-13"}]}}
 {"description": "reject non-boolean transaction failure flags", "expected_error": true, "id": "outbox-0014", "input": {"events": [{"action": "commit", "fail": "yes", "id": "notice-14", "value": {"sample": 14, "topic": "notification"}}]}}
+{"description": "reject sends for uncommitted record IDs", "expected_error": true, "id": "outbox-0015", "input": {"events": [{"action": "send", "id": "notice-15", "succeed": true}]}}
