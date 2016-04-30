@@ -110,3 +110,4 @@
 {"description": "reject commits without a record value", "expected_error": true, "id": "outbox-0109", "input": {"events": [{"action": "commit", "id": "notice-109"}]}}
 {"description": "reject non-boolean transaction failure flags", "expected_error": true, "id": "outbox-0110", "input": {"events": [{"action": "commit", "fail": "yes", "id": "notice-110", "value": {"sample": 110, "topic": "notification"}}]}}
 {"description": "reject sends for uncommitted record IDs", "expected_error": true, "id": "outbox-0111", "input": {"events": [{"action": "send", "id": "notice-111", "succeed": true}]}}
+{"description": "reject conflicting duplicate record IDs", "expected_error": true, "id": "outbox-0112", "input": {"events": [{"action": "commit", "fail": false, "id": "notice-112", "value": {"sample": 112, "topic": "notification"}}, {"action": "commit", "fail": false, "id": "notice-112", "value": {"sample": 113}}]}}
