@@ -362,3 +362,4 @@
 {"description": "reject commits without a record value", "expected_error": true, "id": "outbox-0361", "input": {"events": [{"action": "commit", "id": "notice-361"}]}}
 {"description": "reject non-boolean transaction failure flags", "expected_error": true, "id": "outbox-0362", "input": {"events": [{"action": "commit", "fail": "yes", "id": "notice-362", "value": {"sample": 362, "topic": "notification"}}]}}
 {"description": "reject sends for uncommitted record IDs", "expected_error": true, "id": "outbox-0363", "input": {"events": [{"action": "send", "id": "notice-363", "succeed": true}]}}
+{"description": "reject conflicting duplicate record IDs", "expected_error": true, "id": "outbox-0364", "input": {"events": [{"action": "commit", "fail": false, "id": "notice-364", "value": {"sample": 364, "topic": "notification"}}, {"action": "commit", "fail": false, "id": "notice-364", "value": {"sample": 365}}]}}
